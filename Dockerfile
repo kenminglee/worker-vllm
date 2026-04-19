@@ -17,10 +17,10 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     python3 -m pip install --upgrade -r /requirements.txt
 
 # Setup for Option 2: Building the Image with the Model included
-ARG MODEL_NAME=""
+ARG MODEL_NAME="Qwen/Qwen3.6-35B-A3B-FP8"
 ARG TOKENIZER_NAME=""
 ARG BASE_PATH="/runpod-volume"
-ARG QUANTIZATION=""
+ARG QUANTIZATION="fp8"
 ARG MODEL_REVISION=""
 ARG TOKENIZER_REVISION=""
 ARG VLLM_NIGHTLY="false"
